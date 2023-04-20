@@ -12,7 +12,7 @@ router.get('/api/users', users.getAllUsers)
 
 // Enpoint 1
 // get usuarios activos ordenados por nombre
-router.get('/api/users:name', users.getActiveUsers)
+router.get('/api/users/:name', users.getActiveUsers)
 
 // Enpoint 2
 // Buscar usuario por parametros 

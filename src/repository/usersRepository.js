@@ -17,12 +17,13 @@ exports.getActiveUsers = (name) => {
     return activeUsers
   }
 
-  exports.searchUser = (userData) => {
-    let foundUser = users.filter((user) => (user.name.toLowerCase().includes(userData.name.toLowerCase()) && 
-                                        user.email.toLowerCase().includes(userData.email.toLowerCase()) &&
-                                        user.isActive == userData.isActive &&
-                                        user.age == userData.age &&
-                                        user.company.toLowerCase().includes(userData.company.toLowerCase())
+  exports.searchUser = (userParams) => {
+    let foundUser = users.filter((user) => (
+                                        (!userParams.name || user.name.toLowerCase().includes(userParams.name.toLowerCase())) && 
+                                        (!userParams.email || user.email.toLowerCase().includes(userParams.email.toLowerCase())) &&
+                                        (!userParams.isActive || user.isActive == userParams.isActive) &&
+                                        (!userParams.age || user.age == userParams.age) &&
+                                        (!userParams.company || user.company.toLowerCase().includes(userParams.company.toLowerCase()))
                                         )
                                         );
     if(foundUser.length == 0){
