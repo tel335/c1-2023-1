@@ -581,7 +581,7 @@
     "_id": "643c8469c4521a9f26e0c71b",
     "index": 34,
     "guid": "941f17f5-5ce4-4112-984e-d30f8c277c99",
-    "isActive": false,
+    "isActive": true,
     "balance": "$1,813.11",
     "picture": "http://placehold.it/32x32",
     "age": 28,
