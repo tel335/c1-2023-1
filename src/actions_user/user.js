@@ -13,6 +13,7 @@ exports.GetActiveUsers = (input,response) =>{
         }
     })
     return activos
+    
 }
 
 
