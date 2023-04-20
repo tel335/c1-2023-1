@@ -1,0 +1,1 @@
+exports.errorm = {   "status": 500,   "message": "Hubo un error al procesar los datos, intente nuevamente"}
