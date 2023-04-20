@@ -1,9 +1,10 @@
 import Router from 'koa-router'
 import getHealth from './health/health'
-import actions, { getActiveUsers } from '../actions/index.js'
+import { getActiveUsers, getUser } from '../actions/index.js'
 
 const router = new Router()
 
 router.get('/health', getHealth)
 router.get('/api/users/:name', getActiveUsers)
+router.post('/api/user', getUser)
 export default router
