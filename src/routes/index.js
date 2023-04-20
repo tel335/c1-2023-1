@@ -5,4 +5,5 @@ const router = new Router()
 
 router.get('/health', getHealth)
 
+
 export default router
