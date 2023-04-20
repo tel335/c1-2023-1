@@ -17,6 +17,7 @@ router.get('/api/users/:name', users.getActiveUsers)
 // Enpoint 2
 // Buscar usuario por parametros 
 // mail, name,age, company, isActive
+//
 router.post('/api/user', users.searchUser)
 
 
