@@ -1,12 +1,12 @@
 import repositoryActions from '../../repository/usersRepository'
 
-//Endpoint 1
+// Endpoint 1 devuelve todos los usuarios (se uso como test)
 exports.getAllUsers = (ctx) => {
     ctx.body = repositoryActions.getUsers()
     return ctx
 }
 
-//Endpoint 2
+// Endpoint 2 devuelve los usuarios buscado con $name
 exports.filter = (ctx) => {
     let param = ctx.params.name
     const res = repositoryActions.getFilter(param)
@@ -26,7 +26,7 @@ exports.filter = (ctx) => {
 }
 
 
-//Endpoint 3
+// Endpoint 3 devuelve usuarios buscados segun los parametros
 exports.getDetails = (ctx) => {
     const data = ctx.request.body
     let res = repositoryActions.getDetails(data)
